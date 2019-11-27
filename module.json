@@ -1,0 +1,13 @@
+{
+    "name": "PrintAuto",
+    "alias": "printauto",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\PrintAuto\\Providers\\PrintAutoServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,1 @@
+<a href="{{ route('printauto.print', $order) }}" class="btn btn-outline-primary mr-3"><i class="fa fa-print"></i> Imprimir</a>
