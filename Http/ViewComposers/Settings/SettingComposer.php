@@ -3,25 +3,25 @@
 namespace Modules\PrintAuto\Http\ViewComposers\Settings;
 
 use Modules\Dashboard\Services\ViewComposer\ServiceComposer;
-use Modules\Order\Repositories\SettingOrderRepository;
+use Modules\PrintAuto\Repositories\SettingPrintAutoRepository;
 
 
 class SettingComposer extends ServiceComposer {
 
-    private $setting_order;
+    private $setting_print_auto;
 
     public function assign($view){
-        $this->setting_order();
+        $this->settingPrintAuto();
     }
 
 
-    private function setting_order(){
-        $this->setting_order = SettingOrderRepository::load();
+    private function settingPrintAuto(){
+        $this->setting_print_auto = SettingPrintAutoRepository::load();
     }
 
 
     public function view($view){
-        $view->with('setting_order', $this->setting_order);
+        $view->with('setting_print_auto', $this->setting_print_auto);
     }
 
 }

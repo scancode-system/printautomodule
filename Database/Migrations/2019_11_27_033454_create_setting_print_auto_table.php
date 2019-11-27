@@ -15,7 +15,8 @@ class CreateSettingPrintAutoTable extends Migration
     {
         Schema::create('setting_print_auto', function (Blueprint $table) {
             $table->bigIncrements('id');
-
+            $table->integer('number_copies')->default(2);
+            $table->boolean('auto')->default(true);
             $table->timestamps();
         });
     }

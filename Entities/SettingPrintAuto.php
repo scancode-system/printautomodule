@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class SettingPrintAuto extends Model
 {
-    protected $fillable = [];
+	protected $table = 'setting_print_auto';
+	protected $fillable = ['id', 'number_copies', 'auto'];
 }

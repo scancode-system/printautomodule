@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Modules\PrintAuto\Repositories\SettingPrintAutoRepository;
 
 class InsertSettingPrintAutoRecords extends Migration
 {
@@ -13,10 +14,8 @@ class InsertSettingPrintAutoRecords extends Migration
      */
     public function up()
     {
-        Schema::table('', function (Blueprint $table) {
-
-        });
-    }
+       SettingPrintAutoRepository::init();
+   }
 
     /**
      * Reverse the migrations.
@@ -25,8 +24,6 @@ class InsertSettingPrintAutoRecords extends Migration
      */
     public function down()
     {
-        Schema::table('', function (Blueprint $table) {
-
-        });
+        SettingPrintAutoRepository::end();
     }
 }

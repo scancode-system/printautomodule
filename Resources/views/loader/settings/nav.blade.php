@@ -1,0 +1,1 @@
+<a class="nav-item nav-link {{ ($tab=='order_setting_print')?'active':'' }}" href="{{ route('settings.index', 'order_setting_print') }}" >Impressora</a>
