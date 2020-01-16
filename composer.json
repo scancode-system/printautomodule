@@ -22,5 +22,8 @@
             "Modules\\PrintAuto\\": ""
         }
     },
-    "type": "laravel-module"
+    "type": "laravel-module",
+    "require": {
+        "scancode-system/pdf-module":"^1.0",
+    }
 }
