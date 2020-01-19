@@ -24,6 +24,6 @@
     },
     "type": "laravel-module",
     "require": {
-        "scancode-system/pdf-module":"^1.0",
+        "scancode-system/pdf-module":"^1.0"
     }
 }
