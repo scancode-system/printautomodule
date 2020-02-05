@@ -33,7 +33,8 @@ class PrintAutoJob implements ShouldQueue
     {
         //dd('java -jar ' . base_path('/Modules/PrintAuto/Resources/assets/pdfbox-app-2.0.8.jar') . ' PrintPDF -silentPrint ' . $this->path);
         for($i = 0; $i < $this->copies; $i++){
-            exec('java -jar ' . base_path('/Modules/PrintAuto/Resources/assets/pdfbox-app-2.0.8.jar') . ' PrintPDF -silentPrint ' . $this->path);
+            /*exec('java -jar ' . base_path('/Modules/PrintAuto/Resources/assets/pdfbox-app-2.0.8.jar') . ' PrintPDF -silentPrint ' . $this->path);*/
+            exec('lp ' . $this->path);
         }
     }
 }
