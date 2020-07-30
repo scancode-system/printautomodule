@@ -13,7 +13,7 @@ class OrderObserver
 	public function updated(Order $order)
 	{
 		if((SettingPrintAutoRepository::load())->auto){
-			if($order->isDirty('status_id')){
+			if($order->isDirty('status_id') && !$order->getOriginal('first_closure')){
 				if($order->status_id == STATUS::COMPLETED){
 					$print_service = new PrintAutoService($order);
 					$print_service->run();
@@ -21,5 +21,4 @@ class OrderObserver
 			}
 		}
 	}
-
 }
